@@ -111,7 +111,7 @@ main {
     & .ancho50{
         width: 50%;
         background-color: #FFC300;
-        border: solid 2px red;
+        border: solid 2px rgb(136, 63, 63);
     }
 }
 
