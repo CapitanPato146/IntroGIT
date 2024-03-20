@@ -107,6 +107,12 @@ main {
 #descripcion {
     height: 150px;
     background-color: #581845;
+
+    & .ancho50{
+        width: 50%;
+        background-color: #FFC300;
+        border: solid 2px red;
+    }
 }
 
 #nosotros {
