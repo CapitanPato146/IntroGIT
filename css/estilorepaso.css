@@ -110,8 +110,13 @@ main {
 
     & .ancho50{
         width: 50%;
+        height: 100%;
         background-color: #FFC300;
-        border: solid 2px rgb(136, 63, 63);
+        border: solid 3px  #581845;
+        font-size: 40px;
+        color: blueviolet;
+        font-family: 'Courier New', Courier, monospace;
+        overflow: hidden;
     }
 }
 
@@ -124,4 +129,10 @@ footer {
     height: 50px;
     width: 100%;
     background-color: gold;
+}
+
+.imagen{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
