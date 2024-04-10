@@ -5,6 +5,8 @@
     /* Elimina el borde blanco */
     box-sizing: border-box;
     /* Elimina la barra de desplazamiento */
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 :root {
@@ -13,15 +15,23 @@
     --ancho100: 100%;
     --colorprimario: ##FF5733;
 }
+
 /* ---ORDENAMIENTO----- */
-.dflex{
+.dflex {
     display: flex;
 }
-.centrar{
+.columna {
+    flex-direction: column;
+}
+.separar {
+    justify-content: space-between;
+}
+
+.centrar {
     justify-content: center;
     align-items: center;
 }
-
+.h50 { height: 50%; }
 
 /* ---FIN ORDENAMIENTO----- */
 
@@ -43,9 +53,12 @@ header {
     height: 60px;
     width: 100%;
     background-color: #FFC300;
-    display: flex; /* Metodo de ordenamiento: Los elementos que va a estar conteniendo los ordena uno al lado del otro */
-    justify-content: space-between; /* Envia el contenido al principio y final */
-    align-items: center; /* Alinea el contenido verticalmente */
+    display: flex;
+    /* Metodo de ordenamiento: Los elementos que va a estar conteniendo los ordena uno al lado del otro */
+    justify-content: space-between;
+    /* Envia el contenido al principio y final */
+    align-items: center;
+    /* Alinea el contenido verticalmente */
     /* flex-direction: column; */
 
     & .logo {
@@ -56,25 +69,32 @@ header {
         align-items: center;
         justify-content: space-around;
 
-        & span:first-child{ /* first-child solo se aplica al primero del tipo despues de cada diferente*/
+        & span:first-child {
+            /* first-child solo se aplica al primero del tipo despues de cada diferente*/
             font-size: 20pt;
             color: white;
         }
-        & span:nth-child(2){
+
+        & span:nth-child(2) {
             color: gold;
         }
     }
 
     & .botonera {
         height: 30px;
-        & a{
-            text-decoration: none; /* Elimina el subrayado del enlace */
+
+        & a {
+            text-decoration: none;
+            /* Elimina el subrayado del enlace */
             font-size: 25px;
-            padding: 10px 20px 0px 20px; /* Separacion entre cada boton */
+            padding: 10px 20px 0px 20px;
+            /* Separacion entre cada boton */
             background-color: white;
-            border-radius: 20px; /* Borde del cuadrado*/
+            border-radius: 20px;
+            /* Borde del cuadrado*/
         }
-        & a:hover{
+
+        & a:hover {
             box-shadow: 0px 0px 25px -5px #C70039;
             /* background-color:#C70039; */
         }
@@ -92,6 +112,7 @@ main {
     margin: auto;
     /* Centraliza el contenedor */
 }
+
 #banner {
     height: 200px;
     /* var() para seleccionar las variables */
@@ -99,23 +120,40 @@ main {
 }
 
 #articulos {
-    height: 300px;
-    background-color: #900C3F;
+    width: 100%;
+    height: 400px;
+    background-color: aqua;
+    display: flex;
 }
-.divider{
+
+.producto {
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    padding: 10px;
+
+    & .img_prod {
+        height: 50%;
+        width: 100%;
+        background-color: yellowgreen;
+    }
+}
+
+.divider {
     height: 3px;
     width: 100%;
-    background: linear-gradient(90deg,  rgba(0,0,0,0) 0%, blue 50%, rgb(255, 255, 255) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, blue 50%, rgb(255, 255, 255) 100%);
 }
+
 #descripcion {
-    height: 150px; 
+    height: 150px;
     background-color: #581845;
 
-    & .ancho50{
+    & .ancho50 {
         width: 50%;
         height: 100%;
         background-color: #FFC300;
-        border: solid 3px  #581845;
+        border: solid 3px #581845;
         font-size: 40px;
         color: blueviolet;
         font-family: 'Courier New', Courier, monospace;
@@ -134,7 +172,25 @@ footer {
     background-color: gold;
 }
 
-.imagen{
+.btn {
+    border: solid 1px white;
+    background-color: transparent;
+    box-shadow: 0 0 15px 0 black;
+    width: 100%;
+    padding: 5px 5px;
+}
+
+.btn:hover {
+    background-color: white;
+    box-shadow: 0 5px 15px 0 black;
+}
+
+.btn:active {
+    background-color: rgb(120, 190, 108);
+    box-shadow: 0 5px 15px 0 black;
+}
+
+.imagen {
     height: 100%;
     width: 100%;
     object-fit: cover;
