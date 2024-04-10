@@ -92,7 +92,6 @@ main {
     margin: auto;
     /* Centraliza el contenedor */
 }
-
 #banner {
     height: 200px;
     /* var() para seleccionar las variables */
