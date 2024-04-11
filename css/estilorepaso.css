@@ -129,7 +129,6 @@ main {
 .producto {
     width: 25%;
     height: 100%;
-    background-color: white;
     padding: 10px;
 
     & .img_prod {
@@ -137,6 +136,18 @@ main {
         width: 100%;
         background-color: yellowgreen;
     }
+}
+
+.producto:first-of-type {
+    background-color: #C70039;
+}
+.producto:nth-of-type(odd) {
+    background-color: greenyellow;
+    
+} 
+.producto:nth-of-type(even) {
+    background-color: rgb(2, 43, 2);
+    
 }
 
 .divider {
