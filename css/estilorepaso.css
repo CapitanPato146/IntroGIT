@@ -142,12 +142,15 @@ main {
     background-color: #C70039;
 }
 .producto:nth-of-type(odd) {
-    background-color: greenyellow;
+    background-color: rgb(105, 19, 38);
     
 } 
 .producto:nth-of-type(even) {
-    background-color: rgb(2, 43, 2);
+    background-color: rgb(168, 48, 58);
     
+}
+.textoblanco {
+    color: white;
 }
 
 .divider {
@@ -164,7 +167,7 @@ main {
         width: 50%;
         height: 100%;
         background-color: #FFC300;
-        border: solid 3px #581845;
+        border: solid 3px #ff4dca;
         font-size: 40px;
         color: blueviolet;
         font-family: 'Courier New', Courier, monospace;
